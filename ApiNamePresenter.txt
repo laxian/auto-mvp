@@ -1,0 +1,35 @@
+package com.ett.bcm.presenter.impl;
+
+import android.content.Context;
+
+import com.c2hw.tools.mvp.AbstractPresenter;
+import com.c2hw.tools.okhttp.OkhttpHandler;
+import com.ett.bcm.model.I{ApiName}Model;
+import com.ett.bcm.model.impl.{ApiName}Model;
+import com.ett.bcm.page.view.I{ApiName}View;
+import com.ett.bcm.presenter.I{ApiName}Presenter;
+
+/**
+ * by zwx
+ * auto-generate
+ */
+
+public class {ApiName}Presenter extends AbstractPresenter implements I{ApiName}Presenter {
+    private final I{ApiName}Model {apiName}Model;
+    private final I{ApiName}View {apiName}View;
+
+    public {ApiName}Presenter(Context context , I{ApiName}View view) {
+        super(context, view);
+        {apiName}View = view;
+        {apiName}Model = new {ApiName}Model(context);
+    }
+
+    @Override
+    public void {apiName}({TypedParams}) {
+        {apiName}Model.{apiName}({Params}, new OkhttpHandler(this));
+    }
+
+    @Override
+    protected void setUpData(String json, boolean... refresh) {
+    }
+}

@@ -1,0 +1,32 @@
+package com.ett.bcm.model.impl;
+
+
+import android.content.Context;
+
+import com.c2hw.tools.mvp.AbstractModel;
+import com.c2hw.tools.okhttp.OkHttpUtil;
+import com.ett.bcm.constant.HttpConstant;
+import com.ett.bcm.model.I{ApiName}Model;
+
+import okhttp3.Callback;
+
+/**
+ * Created by zwx on 2016/11/29
+ */
+
+public class {ApiName}Model extends AbstractModel implements I{ApiName}Model {
+
+    public {ApiName}Model(Context context) {
+        super(context);
+    }
+
+    @Override
+    public void {apiName}({TypedParams}, Callback callback) {
+        String url = HttpConstant.URL_{API_NAME} + appendParams(HttpConstant.KEY_{API_NAME}, {ParamsPair});
+        try {
+            OkHttpUtil.getInstance().getAsync(url, callback);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

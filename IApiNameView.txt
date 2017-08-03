@@ -1,0 +1,11 @@
+package com.ett.bcm.page.view;
+
+import com.c2hw.tools.mvp.IBaseView;
+
+/**
+ * by zwx
+ * auto-generate
+ */
+
+public interface I{ApiName}View extends IBaseView {
+}

@@ -1,0 +1,10 @@
+package com.ett.bcm.presenter;
+
+/**
+ * by zwx
+ * auto-generate
+ */
+
+public interface I{ApiName}Presenter {
+    void {apiName}({TypedParams});
+}

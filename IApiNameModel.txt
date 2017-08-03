@@ -1,0 +1,13 @@
+package com.ett.bcm.model;
+
+import okhttp3.Callback;
+
+
+/**
+ * by zwx
+ * auto-generate
+ */
+
+public interface I{ApiName}Model {
+    void {apiName}({TypedParams},Callback callback);
+}
