@@ -1,22 +1,22 @@
 #! /usr/bin/python
 # encoding=utf-8
 
-from constant import cfg
-from constant import constant_key
-from constant import constant_path
-from constant import constant_url
-from constant import path_const
-from constant import path_model
-from constant import template_impl
-from constant import template_impl_get
-from constant import template_int
+from config import cfg
+from config import constant_key
+from config import constant_path
+from config import constant_url
+from config import path_const
+from config import path_model
+from config import template_impl
+from config import template_impl_get
+from config import template_int
 from utils import read_cfg
 from utils import replace_all
 
 dic_list = read_cfg(cfg)
 
 for phd in dic_list:
-    print ('---->\t'+phd['API_NAME'])
+    print ('--->\t'+phd['API_NAME'])
 
     # 处理IModel
     ftem = open(template_int)

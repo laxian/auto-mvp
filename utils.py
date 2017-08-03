@@ -3,7 +3,7 @@
 
 import json
 from collections import OrderedDict
-from constant import mode_all as mode, api
+from config import mode_all as mode, api
 
 
 def split_camel(str):

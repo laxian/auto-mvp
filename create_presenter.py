@@ -1,12 +1,12 @@
 #! /usr/bin/python
 # encoding=utf-8
 
-from constant import cfg
-from constant import path_pres
-from constant import path_view
-from constant import template_ipres
-from constant import template_pres
-from constant import template_view
+from config import cfg
+from config import path_pres
+from config import path_view
+from config import template_ipres
+from config import template_pres
+from config import template_view
 from utils import read_cfg
 from utils import replace_all
 

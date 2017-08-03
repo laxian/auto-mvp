@@ -22,12 +22,12 @@ path_view = project_root + project_src + 'page/view/'
 path_model = project_root + project_src + 'model/'
 
 # template file path
-template_int = project_root + 'auto-mvp/IApiNameModel.txt'
-template_impl = project_root + 'auto-mvp/ApiNameModel.txt'
-template_impl_get = project_root + 'auto-mvp/ApiNameModel_Get.txt'
-template_pres = project_root + 'auto-mvp/ApiNamePresenter.txt'
-template_ipres = project_root + 'auto-mvp/IApiNamePresenter.txt'
-template_view = project_root + 'auto-mvp/IApiNameView.txt'
+template_int = project_root + 'auto-mvp/template/IApiNameModel.txt'
+template_impl = project_root + 'auto-mvp/template/ApiNameModel.txt'
+template_impl_get = project_root + 'auto-mvp/template/ApiNameModel_Get.txt'
+template_pres = project_root + 'auto-mvp/template/ApiNamePresenter.txt'
+template_ipres = project_root + 'auto-mvp/template/IApiNamePresenter.txt'
+template_view = project_root + 'auto-mvp/template/IApiNameView.txt'
 
 # template declaration sentence
 constant_key = '\tpublic static final String URL_%s = dev_base%s + "%s.do";\n'
@@ -35,4 +35,4 @@ constant_url = '\tpublic static final String KEY_%s = "%s.do";\n'
 constant_path = '\tpublic static final String %s = "%s/";\n'
 
 # api config json
-cfg = project_root + 'auto-mvp/api.json'
+cfg = project_root + 'auto-mvp/template/api.json'
