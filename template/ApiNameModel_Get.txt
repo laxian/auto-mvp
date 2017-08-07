@@ -11,7 +11,8 @@ import com.ett.bcm.model.I{ApiName}Model;
 import okhttp3.Callback;
 
 /**
- * Created by zwx on 2016/11/29
+ * by zwx
+ * auto-generate
  */
 
 public class {ApiName}Model extends AbstractModel implements I{ApiName}Model {

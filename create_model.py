@@ -1,7 +1,7 @@
 #! /usr/bin/python
 # encoding=utf-8
 
-from config import cfg
+from config import api_cfg
 from config import constant_key
 from config import constant_path
 from config import constant_url
@@ -13,10 +13,10 @@ from config import template_int
 from utils import read_cfg
 from utils import replace_all
 
-dic_list = read_cfg(cfg)
 
-for phd in dic_list:
-    print ('--->\t'+phd['API_NAME'])
+def create_model(dic_list):
+    for phd in dic_list:
+        print ('--->\t'+phd['API_NAME'])
 
     # 处理IModel
     ftem = open(template_int)
@@ -58,10 +58,14 @@ for phd in dic_list:
             add_path=' + %s'%(path.upper())
             if constant_path%(path.upper(), path) not in constant_content:
                 fconstant.write(constant_path%(path.upper(), path))
-        fconstant.write(constant_key%(phd['API_NAME'], add_path, phd['apiName']))
-        fconstant.write(constant_url%(phd['API_NAME'], phd['apiName']))
+        fconstant.write(constant_key%(phd['API_NAME'], phd['apiName']))
+        fconstant.write(constant_url%(phd['API_NAME'], add_path, phd['API_NAME']))
         fconstant.write('\n}')
     else:
-        print ('---> skip add %s IN HttpConstant.java'%(phd['API_NAME']))
-        print (constant_key)
+        print ('---> skip add %s in HttpConstant.java'%(phd['API_NAME']))
     fconstant.close()
+
+if __name__ == '__main__':
+
+    dic_list = read_cfg(api_cfg)
+    create_model(dic_list)

@@ -1,9 +1,12 @@
+#! /usr/bin/python
+# encoding=utf-8
+
 import sys
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-#通过是否带命令行参数，确定全部生成，还是单个生成
+# 通过是否带命令行参数，确定全部生成，还是单个生成
 mode_all, api = True, ''
 if len(sys.argv) == 1:
     mode_all = True
@@ -30,9 +33,9 @@ template_ipres = project_root + 'auto-mvp/template/IApiNamePresenter.txt'
 template_view = project_root + 'auto-mvp/template/IApiNameView.txt'
 
 # template declaration sentence
-constant_key = '\tpublic static final String URL_%s = dev_base%s + "%s.do";\n'
-constant_url = '\tpublic static final String KEY_%s = "%s.do";\n'
+constant_key = '\tpublic static final String KEY_%s = "%s.do";\n'
+constant_url = '\tpublic static final String URL_%s = dev_base%s + KEY_%s;\n'
 constant_path = '\tpublic static final String %s = "%s/";\n'
 
 # api config json
-cfg = project_root + 'auto-mvp/template/api.json'
+api_cfg = project_root + 'auto-mvp/template/api.json'
